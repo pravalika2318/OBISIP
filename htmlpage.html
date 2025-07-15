@@ -79,6 +79,25 @@
 </head>
 
 <body>
+  <script>
+    function scrollToSection(id) {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+<script>
+  function toggleGallery(id) {
+    const gallery = document.getElementById(id);
+    if (gallery.style.display === "none" || gallery.style.display === "") {
+      gallery.style.display = "block";
+    } else {
+      gallery.style.display = "none";
+    }
+  }
+</script>
+
   <!-- Navigation -->
   <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm py-4 px-6 shadow-sm">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -89,37 +108,25 @@
             </a>
       </div>
       <div class="hidden md:flex space-x-8">
-        <button class="nav-link relative" style="background: #a786c2; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">
-          HOME
-        </button><b>/</b>
-        <button class="nav-link relative" style="background: #adaee6; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">
-          ROOMS
-        </button><b>/</b>
-        <button class="nav-link relative" style="background: #b5a6ec; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">
-          LUXURY POOL
-        </button><b>/</b>
-        <button class="nav-link relative" style="background: #b7ace9; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">
-          RESTAURANT
-        </button><b>/</b>
-        <button class="nav-link relative" style="background: #ccc5e7; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">
-          CONTACT
-        </button>
+  <button class="nav-link relative" onclick="scrollToSection('home')" style="background: #b7ace9; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">HOME</button><b>/</b>
+  <button class="nav-link relative" onclick="scrollToSection('rooms')" style="background: #b7ace9; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">ROOMS</button><b>/</b>
+  <button class="nav-link relative" onclick="scrollToSection('luxarypool')" style="background: #b7ace9; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">LUXURY POOL</button><b>/</b>
+  <button class="nav-link relative" onclick="scrollToSection('restaurant')" style="background: #b7ace9; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">RESTAURANT</button><b>/</b>
+  <button class="nav-link relative" onclick="scrollToSection('contact')" style="background: #b7ace9; color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; margin-right: 8px;">CONTACT</button>
 
-      </div>
-      <button class="md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <button class="hidden md:block btn-primary text-white px-6 py-2 rounded-full font-medium" style="background: linear-gradient(90deg, #9a9fdb, #6476df); color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer;">
-        Book Now
-      </button>
+  <button class="hidden md:block btn-primary text-white px-6 py-2 rounded-full font-medium"
+    onclick="scrollToSection('book-section')" 
+    style="background: linear-gradient(90deg, #9a9fdb, #6476df); color: #222; border: none; padding: 8px 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer;">
+    Book Now
+  </button>
+</div>
+
     </div>
   </nav>
 
   <img src="C:\Users\prava\OneDrive\Pictures\Screenshots\Screenshot 2025-07-02 235543.png" alt="pk hotel" width="100%"
     height="900">
-  <div class="centered">
+  <div class="centered" id="home">
     <h1 style="font-size:50px;">WELCOME TO PK LUXURY HOTEL</h1>
     <p style="font-size:24px; margin-top:20px;">
       Experience the ultimate in comfort, elegance, and hospitality.<br>
@@ -152,53 +159,60 @@
               make your stay unforgettable.
                 </em>
             
-    <div class="main-section">
-        
-        <div class="card">
-          <a href="https://www.pkhotel.com/luxurypool" target="_self">
-            <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsfGVufDB8fDB8fHww"
-              alt="Luxury Pool" width="100%" height="300">
-            <p style="font-size:20px;">LUXURY POOL</p>
-          </a>
-          <!-- rating stars here -->
-           <rate style="font-size: 20px; color: #f39c12; margin-top: 10px;">
-            ★★★★☆
-           </rate>
-
-
-
-        </div>
-        <div class="card">
-          <a href="https://www.pkhotel.com" target="_self">
-            <img
-              src="https://symphony.cdn.tambourine.com/_fusion/rockaway-boutique-hotel/media/therockawayhotelspa-01-homepage-10-gallery-03-65f1e8ecf3831.jpg"
-              alt="Rooms" width="100%" height="300">
-            <p style="font-size:20px;">ROOMS</p>
-          </a>
-          <!-- rating stars here -->
-          <rate style="font-size: 20px; color: #f39c12; margin-top: 10px;">
-            ★★★★★
-          </rate>
-
-
-        </div>
-        <div class="card">
-          <a href="https://www.pkhotel.com/restaurant" target="_self">
-            <img
-              src="https://image-tc.galaxy.tf/wijpeg-7zom008sc741hvyym9ayzyxph/d-edge-hotel-nice-26_wide.jpg?crop=0%2C104%2C2000%2C1125"
-              alt="Restaurant" width="100%" height="300">
-            <p style="font-size:20px;">RESTAURANT</p>
-          </a>
-          <!-- rating stars here -->
-          <rate style="font-size: 20px; color: #f39c12; margin-top: 10px;">
-            ★★★★☆
-          </rate>
-        
-
-        </div>
+    <div class="main-section" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
+  <!-- LUXURY POOL CARD -->
+  <div class="card" id="luxarypool" style="max-width: 350px; flex: 1 1 300px; text-align: left;">
+    <img
+      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsfGVufDB8fDB8fHww"
+      alt="Luxury Pool"
+      width="100%" height="200"
+      style="border-radius: 8px; cursor: pointer;"
+      onclick="toggleGallery('pool-gallery')"
+    >
+    <p style="font-size: 20px;color:#222; margin-top: 20px;">LUXURY POOL</p>
+    <div style="font-size: 20px; color: #f39c12;">★★★★☆</div>
+    <div id="pool-gallery" style="display: none; margin-top: 10px;">
+      <img src="https://www.architectureartdesigns.com/wp-content/uploads/2013/06/brucepalmerllc_com-630x486.jpg" width="100%" style="border-radius: 8px; margin-bottom: 8px;">
+      <img src="https://i.pinimg.com/originals/47/a8/60/47a8602fc26b02b49cebebfc8a7d4afe.jpg" width="100%" style="border-radius: 8px; margin-bottom: 8px;">
     </div>
-    
+  </div>
+
+  <!-- ROOMS CARD -->
+  <div class="card"  id ="rooms" style="max-width: 350px; flex: 1 1 300px; text-align: left;">
+    <img
+      src="https://symphony.cdn.tambourine.com/_fusion/rockaway-boutique-hotel/media/therockawayhotelspa-01-homepage-10-gallery-03-65f1e8ecf3831.jpg"
+      alt="Rooms"
+      width="100%" height="200"
+      style="border-radius: 8px; cursor: pointer;"
+      onclick="toggleGallery('room-gallery')"
+    >
+    <p style="font-size: 20px; color:#222;margin-top: 20px;">ROOMS</p>
+    <div style="font-size: 20px; color: #f39c12;">★★★★★</div>
+    <div id="room-gallery" style="display: none; margin-top: 10px;">
+      <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/231/2020/07/21232839/Luxury-Ocean-View-Room-1-2.jpg" width="100%" style="border-radius: 8px; margin-bottom: 8px;">
+      <img src="http://hotelhennessis.com/wp-content/uploads/2015/12/Standard-Single-Room-Hotel-Hennessis-1.jpg" width="100%" style="border-radius: 8px; margin-bottom: 8px;">
+      <img src="https://www.jaypeehotels.com/webroot/uploads/jaypee-luxery-hotel-in-delhi/assets/images/banner-jvc1.jpg" width="100%" style="border-radius: 8px;">
+    </div>
+  </div>
+
+  <!-- RESTAURANT CARD -->
+  <div class="card"  id= "restaurant"style="max-width: 350px; flex: 1 1 300px; text-align: left;">
+    <img
+      src="https://image-tc.galaxy.tf/wijpeg-7zom008sc741hvyym9ayzyxph/d-edge-hotel-nice-26_wide.jpg?crop=0%2C104%2C2000%2C1125"
+      alt="Restaurant"
+      width="100%" height="200"
+      style="border-radius: 8px; cursor: pointer;"
+      onclick="toggleGallery('restaurant-gallery')"
+    >
+    <p style="font-size: 20px;color:#222; margin-top: 20px;">RESTAURANT</p>
+    <div style="font-size: 20px; color: #f39c12;">★★★★☆</div>
+    <div id="restaurant-gallery" style="display: none; margin-top: 10px;">
+      <img src="https://www.dsigners.net/wp-content/uploads/2018/12/formal-luxury-living-room-sets.jpg" width="100%" style="border-radius: 8px; margin-bottom: 8px;">
+      <img src="https://fancyhouse-design.com/wp-content/uploads/2023/11/Contemporary-interior-decorations-breathe-life-into-this-penthouse-living-rooms-design..jpg" width="100%" style="border-radius: 8px;">
+    </div>
+  </div>
+</div>
+
 
 
  </article>
@@ -219,18 +233,30 @@
 
           <br>
           <div style="margin-top:20px;">
-            <footer style="text-align:center; margin-top:40px;">
+            <div class="card" style="padding:20px;  width: 1800px;background-color: #f0f4f8; border-radius: 12px; text-align: center;">
+              
+            <footer style="text-align:center; margin-top:40px; width: 1800px;">
               <h2>Follow Us</h2>
               <div style="margin-top:10px;">
                 <a href="https://facebook.com/pkheaven" target="_blank" style="margin-right:10px;">Facebook</a>
                 <a href="https://instagram.com/pkheaven" target="_blank" style="margin-right:10px;">Instagram</a>
                 <a href="https://twitter.com/pkheaven" target="_blank">Twitter</a>
               </div>
+              <div class="card"  id = "contact" style="margin-top:50px; padding:20px;width: 1800px; background-color: #82c2ec; border-radius: 12px; align-items: center; display: flex; flex-direction: column;">
+              <h3 style="color: #333; font-size: 24px;">📞 Contact Us</h3>
+
+                <p style="font-size: 18px; color: #555;">For inquiries or reservations, please call us at <strong>+91 1234567890</strong> or email us at <a href="mailto:pravalika@gmil.com" style="color: #387cc9;">
+                  </a>
+                  </p>
+                  </div>
+                </div>
+                  
+            <footer style="color:#9a9fdb">
                   <marquee style="font-size: 20px; color: #8a2be2; margin-top: 30px;">
                 Thankyou for visiting  PK Luxury Hotel – Where comfort meets elegance! Enjoy your stay with our world-class amenities and personalized services again .
                 </marquee>
             </footer>
-          </div>
+          
       </p>
       </div>
 
