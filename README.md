@@ -12,6 +12,7 @@ This helps users understand what functionalities are available. The features inc
 >Image Gallery: The page displays images of the hotel’s amenities, such as rooms, the restaurant, and the pool, providing a visual representation of what guests can expect.
 >Rating System: Each section includes a star rating, giving users a quick overview of the quality of services offered.
 >Contact Information: Links to the hotel’s social media accounts encourage user engagement and provide additional ways to connect with the hotel.
+>And we added a scrolling for thanking them for visiting the page
 # Technologies Used
 The technologies and languages used to build the landing page. In this case, the project uses:
 
